@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+body{
+    
+    background-repeat: no-repeat;
+    background-position: 6rem;
+    background-size: 400px;
+}
+h1{
+    background-color: #cc33bf;
+    color: #fff;
+    
+    height: 5rem;
+    line-height: 5rem;
+}
+#selects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 2rem;
+}
+
+.choice{
+    height: 160px;
+    width: 160px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    cursor: pointer;
+}
+.choice:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow for images */
+    transition: box-shadow 0.3s ease;
+}
+img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Hover effect on images */
+}
+#row3{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    font-size: 2rem;
+    color: #cc33bf; 
+}
+#user-score, #comp-score{
+    font-size: 4rem;
+    min-width: 100px;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #cc33bf;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+#result{
+    margin-top: 5rem;
+    font-size: 1.8rem;
+    color: #555;
+}
+#res{
+    background-color: #cc33bf;
+    color: #fff;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 480px) {
+    body {
+        background-position: center;
+        background-size: 150px; /* Smaller background image for mobile */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        height: 4rem;
+        line-height: 4rem;
+    }
+
+    #selects {
+        flex-direction: column; /* Stack choices vertically on smaller screens */
+        margin-top: 2rem;
+        gap: 1.5rem; /* Reduce spacing between buttons */
+    }
+
+    .choice {
+        height: 100px;
+        width: 100px; /* Smaller buttons */
+    }
+
+    img {
+        height: 90px;
+        width: 90px; /* Adjust image size */
+    }
+
+    #row3 {
+        flex-direction: column; /* Stack the scores vertically */
+        font-size: 1.5rem; /* Smaller font size */
+        gap: 1rem; /* Reduced gap between score elements */
+    }
+
+    #user-score, #comp-score {
+        font-size: 3rem; /* Adjust score size */
+        padding: 0.5rem;
+        min-width: 80px; /* Smaller score box */
+    }
+
+    #result {
+        margin-top: 2rem; /* Less margin for mobile */
+        font-size: 1.4rem; /* Adjust result text size */
+    }
+
+    #res {
+        font-size: 1.5rem; /* Smaller result text */
+        padding: 0.8rem 1.5rem; /* Adjust padding for the result box */
+    }
+}
